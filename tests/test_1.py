@@ -78,15 +78,22 @@ def test_readable_function():
 
 
 def open_browser(browser_name):
-    actual_result = None
+    actual_result = open_browser
+
     assert actual_result == "Open Browser [Chrome]"
 
 
 def go_to_companyname_homepage(page_url):
-    actual_result = None
+    actual_result = go_to_companyname_homepage
     assert actual_result == "Go To Companyname Homepage [https://companyname.com]"
 
 
 def find_registration_button_on_login_page(page_url, button_text):
-    actual_result = None
+    actual_result = find_registration_button_on_login_page
     assert actual_result == "Find Registration Button On Login Page [https://companyname.com/login, Register]"
+
+def print_function_and_args(func, *args):
+    func_name = func.__name__.replace('_', ' ').title()
+    arg_names = ', '.join([*args])
+    print(f"{func_name} [{arg_names}]")
+    return f"{func_name} [{arg_names}]"
