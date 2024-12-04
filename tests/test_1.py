@@ -5,7 +5,7 @@ def test_dark_theme_by_time():
     current_time = time(hour=23)
 
     if time(hour=22) <= current_time or current_time <= time(hour=6):
-        is_dark_them = True
+        is_dark_theme = True
 
     assert is_dark_theme is True
 
@@ -17,7 +17,7 @@ def test_dark_theme_by_time_and_user_choice():
 
     if dark_theme_enabled_by_user == None:
         if time(hour=22) <= current_time or current_time <= time(hour=6):
-            is_dark_them = True
+            is_dark_theme = True
         else:
             is_dark_them = False
     else:
